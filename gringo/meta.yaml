@@ -17,9 +17,13 @@ requirements:
     - scons
     - python
     - tbb
+    - bison
+    - re2c
   run:
     - python
     - tbb
+    - bison
+    - re2c
 
 test:
   imports:

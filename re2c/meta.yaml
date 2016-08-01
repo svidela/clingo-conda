@@ -1,0 +1,32 @@
+{% set version = "0.16" %}
+
+package:
+  name: re2c
+  version: {{ version }}
+
+source:
+  fn: bison-{{ version }}.tar.gz
+  url: https://github.com/skvadrik/re2c/releases/download/{{ version }}/re2c-{{ version }}.tar.gz
+  
+build:
+  number: 0
+
+requirements:
+  build:
+    - bison
+  run:
+    - bison
+    
+test:
+  commands:
+    - re2c --help  # [unix]
+
+about:
+  home: http://re2c.org/
+  license: GPL 3
+  summary: re2c is a lexer generator for C/C++
+
+extra:
+  recipe-maintainers:
+    - svidela
+
