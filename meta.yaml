@@ -1,0 +1,36 @@
+{% set version = "4.5.4" %}
+
+package:
+  name: gringo
+  version: {{ version }}
+
+source:
+  url: http://downloads.sourceforge.net/project/potassco/clingo/{{ version }}/clingo-{{ version }}-source.tar.gz
+  patches:
+    - clingo.patch
+  
+build:
+  number: 0
+
+requirements:
+  build:
+    - scons
+    - python
+    - tbb
+  run:
+    - python
+    - tbb
+
+test:
+  imports:
+    - gringo
+
+about:
+  home: http://potassco.sourceforge.org
+  license: GPL 3
+  summary: Answer Set Programming solver
+
+extra:
+  recipe-maintainers:
+    - svidela
+

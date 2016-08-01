@@ -1,0 +1,26 @@
++++ build/release.py	2016-08-01 16:34:23.806773167 -0300
+@@ -0,0 +1,23 @@
++import os
++
++PREFIX = os.environ['PREFIX']
++CXX = 'g++'
++CXXFLAGS = ['-std=c++11', '-O3', '-Wall']
++CPPPATH = [PREFIX + '/include/python2.7', PREFIX + '/include', PREFIX + '/include/tbb']
++CPPDEFINES = {'NDEBUG': 1}
++LIBS = []
++LIBPATH = [PREFIX + '/lib', PREFIX]
++LINKFLAGS = ['-std=c++11', '-O3']
++RPATH = [PREFIX + '/lib']
++AR = 'ar'
++ARFLAGS = ['rc']
++RANLIB = 'ranlib'
++BISON = PREFIX + '/bin/bison'
++RE2C = PREFIX + '/bin/re2c'
++PYTHON_CONFIG = 'python-config'
++PKG_CONFIG = 'pkg-config'
++WITH_PYTHON = 'python2.7'
++WITH_LUA = None
++WITH_TBB = 'tbb'
++WITH_CPPUNIT = 'auto'
++
+
