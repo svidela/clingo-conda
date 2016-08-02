@@ -1,7 +1,7 @@
 {% set version = "4.5.4" %}
 
 package:
-  name: gringo
+  name: clingo
   version: {{ version }}
 
 source:
@@ -30,9 +30,9 @@ test:
     - gringo
 
 about:
-  home: http://potassco.sourceforge.org
+  home: http://potassco.sourceforge.net
   license: GPL 3
-  summary: Answer Set Programming solver
+  summary: Answer Set Programming solver developed at the University of Potsdam, Germany.
 
 extra:
   recipe-maintainers:
