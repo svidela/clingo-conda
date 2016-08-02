@@ -16,16 +16,22 @@ requirements:
   build:
     - scons
     - python
+    - lua
     - tbb
     - bison
     - re2c
   run:
     - python
+    - lua
     - tbb
     - bison
     - re2c
 
 test:
+  commands:
+    - reify --version
+    - gringo --version
+    - clingo --version
   imports:
     - gringo
 
