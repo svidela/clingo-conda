@@ -12,6 +12,7 @@ matrix:
 
     - os: osx
       compiler: clang
+      env: COMPILER=g++
 
 install:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
