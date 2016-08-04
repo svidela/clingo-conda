@@ -3,7 +3,8 @@ matrix:
   include:
     - os: linux
       sudo: required
-      serives: docker
+      services:
+        - docker
 
     - os: osx
       compiler: clang
