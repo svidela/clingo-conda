@@ -10,24 +10,22 @@ matrix:
 
 install:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
-      docker build -t svidela/clingo-conda .
+      docker build -t svidela/clingo-conda .;
     else
       wget https://repo.continuum.io/miniconda/Miniconda2-latest-MacOSX-x86_64.sh -O miniconda.sh;
-
-      bash miniconda.sh -b -p $HOME/miniconda
-      export PATH="$HOME/miniconda/bin:$PATH"
-
-      conda config --set show_channel_urls true
-      conda update --yes conda
-      conda install --yes conda-build jinja2 anaconda-client
-      conda config --add channels conda-forge
+      bash miniconda.sh -b -p $HOME/miniconda;
+      export PATH="$HOME/miniconda/bin:$PATH";
+      conda config --set show_channel_urls true;
+      conda update --yes conda;
+      conda install --yes conda-build jinja2 anaconda-client;
+      conda config --add channels conda-forge;
     fi
 
 script:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
-      docker run -v ${TRAVIS_BUILD_DIR}:/work-dir -w /work-dir svidela/clingo-conda bash -c "conda build ./bison; conda build ./re2c; conda build ./clingo"
+      docker run -v ${TRAVIS_BUILD_DIR}:/work-dir -w /work-dir svidela/clingo-conda bash -c "conda build ./bison; conda build ./re2c; conda build ./clingo";
     else
-      conda build ./bison
-      conda build ./re2c
-      conda build ./clingo
+      conda build ./bison;
+      conda build ./re2c;
+      conda build ./clingo;
     fi
