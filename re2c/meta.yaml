@@ -5,7 +5,7 @@ package:
   version: {{ version }}
 
 source:
-  fn: bison-{{ version }}.tar.gz
+  fn: re2c-{{ version }}.tar.gz
   url: https://github.com/skvadrik/re2c/releases/download/{{ version }}/re2c-{{ version }}.tar.gz
 
 build:
