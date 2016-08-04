@@ -8,7 +8,7 @@
 +CPPPATH = [PREFIX + '/include/python2.7', PREFIX + '/include', PREFIX + '/include/tbb']
 +CPPDEFINES = {'NDEBUG': 1}
 +LIBS = ['dl']
-+LIBPATH = [PREFIX + '/lib', '/usr/lib/x86_64-linux-gnu']
++LIBPATH = [PREFIX + '/lib']
 +LINKFLAGS = ['-std=c++11', '-O3']
 +RPATH = [PREFIX + '/lib']
 +AR = 'ar'
