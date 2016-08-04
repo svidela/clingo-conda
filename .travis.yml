@@ -36,7 +36,7 @@ script:
       conda build ./bison;
       conda build ./re2c;
       conda build ./clingo;
-      ./cp_artifacts.py
+      ./cp_artifacts.py;
     fi
 
 after_success:
