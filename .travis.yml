@@ -1,0 +1,28 @@
+os:
+  - linux
+  - osx
+
+language: python
+
+python:
+  - "2.7"
+
+install:
+  - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then
+      wget https://repo.continuum.io/miniconda/Miniconda2-latest-Linux-x86_64.sh -O miniconda.sh;
+    else
+      wget https://repo.continuum.io/miniconda/Miniconda2-latest-MacOSX-x86_64.sh -O miniconda.sh;
+    fi
+
+  - bash miniconda.sh -b -p $HOME/miniconda
+  - export PATH="$HOME/miniconda/bin:$PATH"
+
+  - conda config --set show_channel_urls true
+  - conda update --yes conda
+  - conda install --yes conda-build jinja2 anaconda-client
+  - conda config --add channels conda-forge
+
+script:
+  - conda build ./bison
+  - conda build ./re2c
+  - conda build ./clingo
