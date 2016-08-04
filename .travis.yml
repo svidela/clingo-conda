@@ -9,10 +9,10 @@ matrix:
           sources:
             - ubuntu-toolchain-r-test
           packages:
-            - g++-4.9
+            - g++-5
       env:
-        - CC=gcc-4.9
-        - CXX=g++-4.9
+        - CC=gcc-5
+        - CXX=g++-5
 
     - os: osx
       compiler: clang
