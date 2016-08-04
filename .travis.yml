@@ -1,18 +1,10 @@
 matrix:
   include:
     - os: linux
-      sudo: required
-      dist: trusty
-      compiler: gcc
-      addons:
-        apt:
-          sources:
-            - ubuntu-toolchain-r-test
-          packages:
-            - g++-5
+      compiler: clang
       env:
-        - CC=gcc-5
-        - CXX=g++-5
+        - CC=clang
+        - CXX=clang++
 
     - os: osx
       compiler: clang
