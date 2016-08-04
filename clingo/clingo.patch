@@ -3,7 +3,7 @@
 +import os
 +
 +PREFIX = os.environ['PREFIX']
-+CXX = 'g++'
++CXX = os.environ.get('CXX','g++')
 +CXXFLAGS = ['-std=c++11', '-O3', '-Wall']
 +CPPPATH = [PREFIX + '/include/python2.7', PREFIX + '/include', PREFIX + '/include/tbb']
 +CPPDEFINES = {'NDEBUG': 1}
