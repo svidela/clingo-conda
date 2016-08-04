@@ -9,7 +9,7 @@
 +CPPDEFINES = {'NDEBUG': 1}
 +LIBS = ['dl']
 +LIBPATH = [PREFIX + '/lib']
-+LINKFLAGS = ['-std=c++11', '-O3']
++LINKFLAGS = ['-std=c++11', '-O3', 'dl']
 +RPATH = [PREFIX + '/lib']
 +AR = 'ar'
 +ARFLAGS = ['rc']
