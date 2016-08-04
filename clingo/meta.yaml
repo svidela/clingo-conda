@@ -8,9 +8,12 @@ source:
   url: http://downloads.sourceforge.net/project/potassco/clingo/{{ version }}/clingo-{{ version }}-source.tar.gz
   patches:
     - clingo.patch
-  
+
 build:
   number: 0
+  script_env:
+   - CC
+   - CXX
 
 requirements:
   build:

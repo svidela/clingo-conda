@@ -9,13 +9,12 @@ matrix:
           packages:
             - g++-4.9
       env:
-        - COMPILER=g++-4.9
         - CC=gcc-4.9
         - CXX=g++-4.9
 
     - os: osx
       compiler: clang
-      env: COMPILER=g++
+      env: CXX=g++
 
 install:
   - if [[ "$TRAVIS_OS_NAME" == "linux" ]]; then

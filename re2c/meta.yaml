@@ -7,16 +7,19 @@ package:
 source:
   fn: bison-{{ version }}.tar.gz
   url: https://github.com/skvadrik/re2c/releases/download/{{ version }}/re2c-{{ version }}.tar.gz
-  
+
 build:
   number: 0
+  script_env:
+   - CC
+   - CXX
 
 requirements:
   build:
     - bison
   run:
     - bison
-    
+
 test:
   commands:
     - re2c --help  # [unix]
