@@ -1,10 +1,16 @@
 matrix:
   include:
     - os: linux
-      compiler: clang
+      compiler: gcc
+      addons:
+        apt:
+          sources:
+            - ubuntu-toolchain-r-test
+          packages:
+            - g++-4.9
       env:
-        - CC=clang
-        - CXX=clang++
+        - CC=gcc-4.9
+        - CXX=g++-4.9
 
     - os: osx
       compiler: clang
