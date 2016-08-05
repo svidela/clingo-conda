@@ -10,7 +10,7 @@ source:
     - clingo.patch
 
 build:
-  number: 0
+  number: 1
 
 requirements:
   build:
@@ -37,7 +37,7 @@ test:
 
 about:
   home: http://potassco.sourceforge.net
-  license: GPL 3
+  license: GPL3
   summary: Answer Set Programming solver developed at the University of Potsdam, Germany.
 
 extra:
