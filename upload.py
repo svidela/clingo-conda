@@ -28,7 +28,7 @@ def upload(cli, meta, owner):
             fh.write(cli.token)
 
         subprocess.check_call(['anaconda', '--quiet', '-t', 'binstar.token',
-                               'upload', 'artifacts/{}'.format(meta.dist()),
+                               'upload', 'artifacts/{}.tar.bz2'.format(meta.dist()),
                                '--user={}'.format(owner)], env=os.environ)
     finally:
         os.remove('binstar.token')
