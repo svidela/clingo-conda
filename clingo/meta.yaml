@@ -37,7 +37,7 @@ test:
 
 about:
   home: http://potassco.sourceforge.net
-  license: GPL
+  license: GPL 3
   license_file: COPYING
   summary: Answer Set Programming solver developed at the University of Potsdam, Germany.
 
