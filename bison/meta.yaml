@@ -9,7 +9,7 @@ source:
   url: http://ftp.gnu.org/gnu/bison/bison-{{ version }}.tar.gz
 
 build:
-  number: 1
+  number: 2
 
 test:
   commands:
@@ -17,7 +17,8 @@ test:
 
 about:
   home: https://www.gnu.org/software/bison/
-  license: GPL3
+  license: GPL
+  license_file: COPYING
   summary: General purpose parser generator converting annotated context-free grammar to a deterministic LR/GLR parser.
 
 extra:
