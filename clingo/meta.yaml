@@ -1,11 +1,11 @@
-{% set version = "4.5.4" %}
+{% set version = "5.0.0" %}
 
 package:
   name: clingo
   version: {{ version }}
 
 source:
-  url: http://downloads.sourceforge.net/project/potassco/clingo/{{ version }}/clingo-{{ version }}-source.tar.gz
+  url: https://github.com/potassco/clingo/archive/v{{ version }}.tar.gz
   patches:
     - clingo.patch
 
@@ -33,10 +33,10 @@ test:
     - gringo --version
     - clingo --version
   imports:
-    - gringo
+    - clingo
 
 about:
-  home: http://potassco.sourceforge.net
+  home: https://potassco.github.io/
   license: GPL3
   summary: Answer Set Programming solver developed at the University of Potsdam, Germany.
 
